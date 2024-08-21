@@ -17,10 +17,10 @@ const PrismaExample = async () => {
   return (
     <div>
       <h1 className='text-7xl'>Prisma_Example</h1>
-      {task.map((map) => {
+      {task.map((task) => {
         return (
           <h2 key={task.id} className='text-xl py-2'>
-            {task.content}
+            😪{task.content}
           </h2>
         );
       })}

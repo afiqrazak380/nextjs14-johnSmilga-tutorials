@@ -23,7 +23,7 @@ const SingleDrinksPage = async ({ params }) => {
   return (
     <div>
       <Link href='/drinks' className='btn btn-primary mt-8 mb-12'>
-        back to the list
+        Back to the list
       </Link>
       {/* <img src={drinkImg.src} /> */}
       {/* <Image src={drinkImg} className='w-48 h-48 rounded-lg' alt='drink' /> */}
