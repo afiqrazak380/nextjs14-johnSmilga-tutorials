@@ -1,13 +1,10 @@
-import prisma from '@/utils/db';
-import DeleteForm from './DeleteForm';
+import { getAllTasks } from '@/utils/action'; // use curly braces to import a snamed export
+import DeleteForm from './DeleteForm'; // no curly braces to import a default export
 import Link from 'next/link';
 
 const TaskList = async () => {
-  const tasks = await prisma.task.findMany({
-    orderBy: {
-      createdAt: 'desc',
-    },
-  });
+  const tasks = await getAllTasks();
+
   if (tasks.length === 0) {
     return <h2 className='mt-8 font-medium text-lg'>No task to show...</h2>;
   }
